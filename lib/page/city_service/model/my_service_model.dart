@@ -29,12 +29,20 @@ enum MyServiceItemId {
   library,
   locationSearch,
   zoo,
+  ubikeFootprint
   ;
 }
 
 extension MyServiceIdExt on MyServiceItemId {
   MyServiceItem get item {
     return switch (this) {
+      MyServiceItemId.ubikeFootprint => MyServiceItem(
+          title: 'YouBike 足跡',
+          description: '讓 YouBike 成為你的運動新選項',
+          icon: Assets.image.ubikeLogo.image(),
+          category: MyServiceCategory.cityService,
+          destinationUrl: 'https://firebase-gtk-web-start-ma5twk2z.stackblitz.io/',
+        ),
       MyServiceItemId.dedicatedLine => MyServiceItem(
           title: '1999',
           description: '播打網路語音通話',
