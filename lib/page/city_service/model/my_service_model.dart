@@ -41,7 +41,7 @@ extension MyServiceIdExt on MyServiceItemId {
           description: '讓 YouBike 成為你的運動新選項',
           icon: Assets.image.ubikeLogo.image(),
           category: MyServiceCategory.cityService,
-          destinationUrl: 'https://firebase-gtk-web-start-ma5twk2z.stackblitz.io/',
+          destinationUrl: 'https://switch-nut-474218.web.app',
         ),
       MyServiceItemId.dedicatedLine => MyServiceItem(
           title: '1999',
