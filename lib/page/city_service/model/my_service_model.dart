@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:town_pass/gen/assets.gen.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 // 先於 MyServiceItemId enum 加入新服務；
 // 再在 MyServiceIdExt 擴充中加入該服務的 MyServiceItem 物件。
@@ -37,11 +38,12 @@ extension MyServiceIdExt on MyServiceItemId {
   MyServiceItem get item {
     return switch (this) {
       MyServiceItemId.ubikeFootprint => MyServiceItem(
-          title: 'YouBike 足跡',
-          description: '讓 YouBike 成為你的運動新選項',
-          icon: Assets.image.ubikeLogo.image(),
+          title: '微笑騎行',
+          description: '你的運動新選項',
+          icon: SvgPicture.asset('assets/svg/icon_ucycle.svg'),
+          //icon: Assets.svg.iconUcycle.svg(),
           category: MyServiceCategory.cityService,
-          destinationUrl: 'https://switch-nut-474218.web.app',
+          destinationUrl: 'https://townpass-youbike-dev.web.app',
         ),
       MyServiceItemId.dedicatedLine => MyServiceItem(
           title: '1999',
